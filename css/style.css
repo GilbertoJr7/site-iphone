@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Funnel Sans";
+    /* box-sizing: border-box; */
+}
+
+:root{
+    --cor--01: #000;
+    --cor--02: #06C;
+    --cor--03: #ccc;
+    --cor--04: #FFF;
+
+}
+body{
+    padding-top: 100px;
+
+}
+/* Centralizar o site */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#cabecalho {
+    background-color: var(--cor--01);
+    margin-bottom: 30px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+#cabecalho #logo{
+    width: 30px;
+
+}
+
+#cabecalho .container{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+#menu ul {
+    display: flex;
+   
+}
+
+#menu ul li{
+    list-style: none;
+}
+
+#menu .submenu{
+    display: none;
+    /* para por o submenu para flutuar use position absolute e z-index: 1; para ir pra frente do menu */
+    position: absolute;
+    z-index: 1;
+    background-color: #ccc;
+}
+
+#menu ul li a {
+    color:var(--cor--04) ;
+    text-decoration: none;
+    display: block;
+    /* padding: 20px 30px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #030000;
+    /* Suavisar a mudança de cor */
+    transition: all .3s linear;
+}
+#menu ul li a:hover{
+    /* hover muda a cor da parte que vc passa o mouse encima */
+    background-color: var(--cor--02);
+
+}
+#menu ul li:hover .submenu{
+    /* block = exibir */
+    display: block;
+
+}
+.conteudo .titulo{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 50px;
+
+}
+#historia img {
+    width: 400px;
+    float: left;
+    border-radius: 30px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+#hitoria p {
+    text-align:justify ;
+    margin-bottom: 15px;
+
+}
+#fotos #galeria{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+#fotos #galeria img {
+    width: 100%;
+    /* display: block; */
+    transition: all .2s linear;
+}
+#fotos #galeria a:hover img{
+    /* aumentar foto quando passar o mouse por cima */
+    transform: scale(1.1);
+}
+#videos #galeria{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+#rodape{
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+    padding: 30px;
+    font-size: 15px;
+    margin-top: 50px;
+
+}   
+footer a{
+    color: #fff;
+    text-decoration: none;
+}
+#rodape a:hover {
+    text-decoration: underline;
+    color: #06C;
+}
